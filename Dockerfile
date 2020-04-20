@@ -6,7 +6,7 @@ ENV HASURA_GRAPHQL_ENABLE_CONSOLE=true
 # Change $DATABASE_URL to your heroku postgres URL if you're not using
 # the primary postgres instance in your app
 CMD graphql-engine \
-    --database-url $DATABASE_URL \
+    --database-url $YUGABYTECLOUD_STAGING_YSQL_CONNECT_URI \
     serve \
     --server-port $PORT
 
