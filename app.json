@@ -21,7 +21,7 @@
   "stack": "container",
   "addons": [
     {
-      "plan": "yugabytecloud-staging:test"
+      "plan": "yugabyte-cloud:test"
     }
   ]
 }
