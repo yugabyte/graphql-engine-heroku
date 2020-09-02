@@ -1,27 +1,27 @@
-# Hasura GraphQL Engine on Heroku
+# Hasura GraphQL Engine on Heroku Powered by Yugabyte Cloud
 
-[![GitHub stars](https://img.shields.io/github/stars/hasura/graphql-engine.svg?style=social&label=Star)](https://github.com/hasura/graphql-engine) 
-<a href="https://discord.gg/vBPpJkS"><img src="https://img.shields.io/badge/chat-discord-brightgreen.svg?logo=discord&style=flat"></a>
-<a href="https://twitter.com/intent/follow?screen_name=HasuraHQ"><img src="https://img.shields.io/badge/Follow-HasuraHQ-blue.svg?style=flat&logo=twitter"></a>
-<a href="https://eepurl.com/dBUfJ5"><img src="https://img.shields.io/badge/newsletter-subscribe-yellow.svg?style=flat"></a>
+[![GitHub stars](https://img.shields.io/github/stars/yugabyte/yugabyte-db.svg?style=social&label=Star)](https://github.com/yugabyte/yugabyte-db) 
+<a href="https://twitter.com/intent/follow?screen_name=Yugabyte"><img src="https://img.shields.io/badge/Follow-Yugabyte-blue.svg?style=flat&logo=twitter"></a>
+
+The Heroku add-on integrates Yugabyte Cloud seamlessly with Heroku, a popular developer PaaS. It allows developers to use YugabyteDB as the system-of-record database for any of their Heroku apps. Through the add-on, Heroku users can quickly have their YugabyteDB running on AWS and GCP (Azure coming soon!). Using it is just as easy as you expect from any PaaS: simply add the add-on dependency to your Heroku app, and you’re good to go!
 
 Hasura GraphQL Engine is a blazing-fast GraphQL server that gives you :zap: **instant,
-realtime GraphQL APIs over Postgres**, with [**webhook
+realtime GraphQL APIs over Yugabyte**, with [**webhook
 triggers**](https://github.com/hasura/graphql-engine/blob/master/event-triggers.md)
 on database events for asynchronous business logic.
 
-Hasura helps you build GraphQL apps backed by Postgres or incrementally move to
+Hasura helps you build GraphQL apps backed by YugabyteDB or incrementally move to
 GraphQL for existing applications using Postgres. 
 
-Deploy Hasura GraphQL Engine on Heroku and get a GraphQL endpoint in under 30 seconds :clock1:
+Deploy Hasura GraphQL Engine with Yugabyte Cloud and get a GraphQL endpoint in under 30 seconds :clock1:
 
-Read more at [hasura.io](https://hasura.io) and the [docs](https://docs.hasura.io). 
+Read more at [Hasura docs](https://docs.hasura.io) or [Yugabyte Cloud docs](https://docs.yugabyte.com/latest/yugabyte-cloud/free-tier/). 
 
 
 ## Quickstart
 
 ### 1. Deploy to Heroku 
-Deploy to Heroku and instantly get a realtime GraphQL API backed by Heroku Postgres:
+Deploy to Heroku and instantly get a realtime GraphQL API backed by Yugabyte Cloud add-on:
 
 [![Deploy to
 Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/yugabyte/graphql-engine-heroku)
@@ -79,30 +79,33 @@ query {
 
 ![Hasura Console - GraphQL query](https://graphql-engine-cdn.hasura.io/heroku-repo/assets/hasura_graphql_query.png)
 
+### 6. View your database console
+
+Access your database console by going to your Heroku dashboard and clicking the add-on name.
+![Yugabyte Cloud - Heroku add-on](https://blog.yugabyte.com/wp-content/uploads/2020/09/cloud-addon.png)
+
+Then click "Go to cluster" to be redirected to the database console.
+
 ## Support & Troubleshooting
 
-Feel free to talk to us on [Discord](https://discord.gg/vBPpJkS) about anything
+Feel free to talk to us on [Slack](https://www.yugabyte.com/slack) about anything
 and everything. You can also contact us using one of the following channels: 
 
-* Support & feedback: [Discord](https://discord.gg/vBPpJkS)
-* Issue & bug tracking: [GitHub issues](https://github.com/hasura/graphql-engine/issues)
-* Follow product updates: [@HasuraHQ](https://twitter.com/hasurahq)
-* Talk to us on our [website chat](https://hasura.io).
+* Support & feedback: [Slack](https://www.yugabyte.com/slack)
+* Issue & bug tracking: [GitHub issues](https://github.com/yugabyte/yugabyte-db/issues)
+* Follow product updates: [@Yugabyte](https://twitter.com/yugabyte)
+* Questions? [Forum](https://forum.yugabyte.com/)
 
-## Next steps
+## What's next
 
-- [Using an existing Heroku database](https://docs.hasura.io/1.0/graphql/manual/deployment/heroku/using-existing-heroku-database.html)
-- [Securing your GraphQL Endpoint](https://docs.hasura.io/1.0/graphql/manual/deployment/heroku/securing-graphql-endpoint.html)
-- [Checking GraphQL Engine logs](https://docs.hasura.io/1.0/graphql/manual/deployment/heroku/logging.html)
-- [Updating to the latest version](https://docs.hasura.io/1.0/graphql/manual/deployment/heroku/updating.html)
+- Configuring [Yugabyte Cloud](https://devcenter.heroku.com/articles/yugabyte-cloud)
+- Explore [YugabyteDB features](https://docs.yugabyte.com/latest/explore/)
+- Install [YugabyteDB](https://docs.yugabyte.com/latest/quick-start/) on your local machine and try out [YSQL](https://docs.yugabyte.com/latest/api/postgresql/) from our docs
+- [Contact](https://www.yugabyte.com/contact-us/) us to learn more about licensing, pricing or to schedule a technical overview
 
 ## Further reading
 
+- [Using an existing Heroku database](https://docs.hasura.io/1.0/graphql/manual/deployment/heroku/using-existing-heroku-database.html)
+- [Securing your GraphQL Endpoint](https://docs.hasura.io/1.0/graphql/manual/deployment/heroku/securing-graphql-endpoint.html)
 - [Building your schema](https://docs.hasura.io/1.0/graphql/manual/schema/index.html)
 - [GraphQL Queries](https://docs.hasura.io/1.0/graphql/manual/queries/index.html)
-- [GraphQL Mutations](https://docs.hasura.io/1.0/graphql/manual/mutations/index.html)
-- [GraphQL Subscriptions](https://docs.hasura.io/1.0/graphql/manual/subscriptions/index.html)
-- [Event Triggers](https://docs.hasura.io/1.0/graphql/manual/event-triggers/index.html)
-- [Authentication/Access control](https://docs.hasura.io/1.0/graphql/manual/auth/index.html)
-- [Database Migrations](https://docs.hasura.io/1.0/graphql/manual/migrations/index.html)
-- [Guides/Tutorials/Resources](https://docs.hasura.io/1.0/graphql/manual/guides/index.html)
