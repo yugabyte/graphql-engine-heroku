@@ -82,9 +82,12 @@ query {
 ### 6. View your database console
 
 Access your database console by going to your Heroku dashboard and clicking the add-on name.
+
 ![Yugabyte Cloud - Heroku add-on](https://blog.yugabyte.com/wp-content/uploads/2020/09/cloud-addon.png)
 
 Then click "Go to cluster" to be redirected to the database console.
+
+![Yugabyte Cloud - List Clusters](https://blog.yugabyte.com/wp-content/uploads/2020/09/cluster-list.png)
 
 ## Support & Troubleshooting
 
